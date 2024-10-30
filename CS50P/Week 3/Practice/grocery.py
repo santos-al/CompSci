@@ -7,3 +7,27 @@ input to a program). Then output the user’s grocery list in all uppercase, sor
 prefixing each line with the number of times the user inputted that item. No need to pluralize the items. 
 Treat the user’s input case-insensitively.
 """
+
+def main():
+    grocery_list()
+
+
+def grocery_list():
+    food_list = {}
+    while(True):
+        try:
+            item = input().strip().upper()
+            if (item in food_list):
+                food_list[item] += 1
+            else:
+                food_list[item] = 1
+        except EOFError:
+            food_list_keys = list(food_list.keys())
+            food_list_keys.sort()
+            sorted_food_list = {i: food_list[i] for i in food_list_keys}
+            for food in sorted_food_list:
+                print(f"{sorted_food_list[food]} {food}")
+            return
+
+
+main()
