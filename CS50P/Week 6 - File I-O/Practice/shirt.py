@@ -27,3 +27,45 @@ If you’d like to run your program on a photo of yourself, first drag the photo
 into the same folder as shirt.py. No need to submit any photos with your code. But, if you would like, 
 you’re welcome (but not expected) to share a photo of yourself wearing your virtual shirt in any of CS50’s communities!
 """
+
+import sys
+from PIL import Image, ImageOps
+
+def main():
+    shirt()
+
+def shirt():
+    if (len(sys.argv) > 3):
+        return sys.exit("Too many command-line arguments")
+    if (len(sys.argv) < 3):
+        return sys.exit("Too few command-line arguments")
+    try:
+        file_before_name, file_before_ext = sys.argv[1].split(".")
+        file_after_name, file_after_ext = sys.argv[2].split(".")
+        file_before_ext = "." + file_before_ext
+        file_after_ext = "." + file_after_ext
+        file_extensions = [".jpg", ".jpeg", ".png"]
+
+
+        if(file_before_ext not in file_extensions or file_after_ext not in file_extensions):
+            return sys.exit("Invalid input")
+        else:
+            if (file_before_ext != file_after_ext):
+                return sys.exit("Input and output have different extensions")
+            else:
+                size = (100, 150)
+                image_before = Image.open((file_before_name + file_before_ext))
+                image_after = Image.open((file_after_name + file_after_ext))
+                fit_image_before = ImageOps.fit(image_before, size)
+                fit_image_after = ImageOps.fit(image_after, size)
+
+                final_image = Image.new("RGB", fit_image_after.size)
+                final_image.paste(fit_image_after, (0,0))
+                final_image.paste(fit_image_before, (0,0), fit_image_after)
+
+                final_image.save("final_product" + file_before_ext)
+    except FileNotFoundError:
+        return sys.exit("File not found")
+
+if __name__ == "__main__":
+    main()
