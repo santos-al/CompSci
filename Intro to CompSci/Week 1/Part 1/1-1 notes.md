@@ -1,4 +1,4 @@
-# Week 1
+# Week 1 Part 1
 
 ## Video 1 - Intro
 
