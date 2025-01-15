@@ -85,5 +85,5 @@ class DynamicArray {
    */
   getCapacity() {
       return this.capacity;
-  }
+  } 
 }
