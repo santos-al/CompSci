@@ -13,7 +13,23 @@ import sys
 #
 
 def plusMinus(arr):
-    # Write your code here
+    positive = 0
+    negative = 0
+    nil = 0
+    length = len(arr)
+    
+    for num in arr:
+        if num > 0:
+            positive += 1
+        elif num < 0:
+            negative += 1
+        else:
+            nil += 1
+            
+    print(round(positive / length, 6) )
+    print(round(negative / length, 6)) 
+    print(round(nil / length, 6))
+            
 
 if __name__ == '__main__':
     n = int(input().strip())
