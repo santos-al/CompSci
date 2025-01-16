@@ -25,6 +25,10 @@ def miniMaxSum(arr):
         total += num
     
     print(total - max_num, total - min_num)
+
+def miniMaxSumOptimized(arr):
+    total = sum(arr)
+    print(total - max(arr), total - min(arr))
     
     
     
