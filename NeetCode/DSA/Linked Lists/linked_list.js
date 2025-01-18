@@ -13,11 +13,13 @@ class LinkedList {
       this.tail = this.head;
   }
 
+  // O(1)
   insertEnd(val) {
       this.tail.next = new ListNode(val);
       this.tail = this.tail.next; 
   }
 
+//   O(n)
   remove(index) {
       let i = 0;
       let curr;
