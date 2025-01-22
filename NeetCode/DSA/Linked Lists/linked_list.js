@@ -37,7 +37,7 @@ class LinkedList {
           curr.next = curr.next.next;
       }
   }
-
+//  O(n)
   print() { 
       let curr = this.head.next;
       let s = "";
