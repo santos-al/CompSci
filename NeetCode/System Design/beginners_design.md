@@ -75,3 +75,45 @@ Latency - amount of time for an operation to complete (E.g. the amount of time i
 # Networking
 
 ## Networking Basics
+
+### The Internet Protocol Basics
+
+IP Address - is what unique identifier for a computer
+  - IPv4
+    - 32 bits 
+    - e.g. 012.345.678.910
+    - max value is 256.256.256.256 because it is 32 bits in size. if the digits went up to 999 then it wouldn't fit into 32 bits.
+  - IPv6
+    - 128 bits
+    - e.g. 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+IP (Internet Protocol) - the rules for sending data over the internet
+
+Packets are sent across and part of them include metadata aka the IP header. Includes things like where the packet comes from and where it needs to go.
+
+TCP (Transmission Control Protocol) - allows us to send large amounts of data via the internet. Since the data will be sent over many packets, TCP is responsible for the accurate transmission of these packets. It ensures that packets arrive in the correct sequence.
+
+- When sending over large amounts of data, we include a TCP header in the meta data 
+
+HTTP is an application level protocol
+TCP is a transport level protocol
+IP is a network level protocol
+
+Public vs. Private IP
+
+ - If our computers are connected to a router, they don't need to have a public IP address. The router is the one doing the communicating with the internet so it will have the public address. 
+
+ - Our LAN will give each of our machines in our home network a private IP address
+
+ - IP Addresses can be static or dynamic
+
+Ports 
+  - are a channels of communication between machines
+  - 16 bits (~65,000)
+  - HTTP uses the 80 port as default
+  - HTTPS uses 443 as default
+
+
+
+
+
