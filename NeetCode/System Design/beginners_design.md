@@ -113,6 +113,24 @@ Ports
   - HTTP uses the 80 port as default
   - HTTPS uses 443 as default
 
+  ## TCP and UDP
+
+  TCP 
+  - handles the order of the packets sent
+  - Very reliable
+  - If some packets don't arrive. TCP ensures that get resent so that the whole package arrives successfully
+  - Called Retransmission of lost packets
+  - It is a two-way connection
+  - Established a 3-way handshake, ensures reliability but is expensive (a lot of overhead)
+  - Web Sockets, HTTP, and Email use TCP
+
+  UDP
+  - Don't need a 3-way handshake
+  - Lost packets do not get resent
+  - Packets may arrive out of order and UDP does not correct them
+  - A lot faster than TCP
+  - Use in live streaming data (such as a video, online games, or DNS) and the packets would be frames
+
 
 
 
