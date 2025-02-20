@@ -131,6 +131,20 @@ Ports
   - A lot faster than TCP
   - Use in live streaming data (such as a video, online games, or DNS) and the packets would be frames
 
+## DNS
+
+DNS (Domain Name System) - the internet's phone book
+
+"nslookup [domain name]" returns the IP address
+
+ICCAN - non-profit that keeps track of all domain names
+
+TDL - e.g. .com, .io, .uk
+
+<img src="./screenshots/dns.png" alt="dns" width="400px">
+
+
+
 
 
 
